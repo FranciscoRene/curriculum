@@ -1,0 +1,70 @@
+<section class="experience section">
+<div class="section-inner">
+<h2 class="heading">Experiencia Laboral</h2>
+<div class="content">
+<div class="item">
+<h3 class="title">Desarrollador Back-End PHP - <span class="place"><a href="#">Freelance</a></span> <span class="year">(2016, Marzo)</span></h3>
+<p>Desarrollo de modulo para la autenticación con facebook para Zend Framework 2</p>
+</div><!--//item-->
+<div class="item">
+<h3 class="title">Desarrollador Back-End PHP - <span class="place"><a href="#">Freelance</a></span> <span class="year">(2016, Marzo)</span></h3>
+<p>Desarrollo de modulo para la autenticación con facebook para Zend Framework 2</p>
+</div><!--//item-->
+<div class="item">
+<h3 class="title">Desarrollador Back-End PHP - <span class="place"><a href="#">Genesys</a></span> <span class="year">(2015 - 2016, Proyecto)</span></h3>
+<p>Desarrollo Back-end PHP.</p>
+</div><!--//item-->
+<div class="item">
+<h3 class="title">Desarrollador Back-End PHP - <span class="place"><a href="#">Aeurus</a></span> <span class="year">(2015, Marzo - Agosto)</span></h3>
+<p>Desarrollo Back-end PHP.</p>
+</div><!--//item-->
+<div class="mas_experiencias">
+	<div class="item">
+	<h3 class="title">Full-Stack PHP Developer - <span class="place"><a href="#">ChileMaquinas</a></span> <span class="year">(2014, Septiembre - Diciembre)</span></h3>
+	<p>Desarrollo Front-end y Back-end PHP</p>
+	</div><!--//item-->
+	<div class="item">
+	<h3 class="title">Desarrollador Mobile Android - <span class="place"><a href="#">Freelance</a></span> <span class="year">(2014, Enero - Marzo)</span></h3>
+	<p>Desarrollo de aplicación para el Mundial de Futbol 2014.</p>
+	</div><!--//item-->
+	<div class="item">
+	<h3 class="title">Programador y Diseñador de VideoJuegos - <span class="place"><a href="#">Proyecto de Título</a></span> <span class="year">(2013 - 2014)</span></h3>
+	<p>Desarrollo de videojuego para smartphones con sistemas operativos 
+	ANDROID E IOS. (JAVA, SQLite, LUA)</p>
+	</div><!--//item-->
+
+	<div class="item">
+	<h3 class="title">Analista Administrador de Sistemas - <span class="place"><a href="#">NeuroManagement </a></span> <span class="year">(2012 - 2013)</span></h3>
+	<p>Encargado de controlar el correcto funcionamiento de los sistemas, instalaciones y sus mejoras, atendiendo los distintos requerimientos de los usuarios internos y externos de la compañía</p>
+	</div><!--//item-->
+</div>
+<div class="extra-experiencia">
+	<a id="mas_experiencias" class="">Ver Más</a>
+</div>
+</div><!--//content-->  
+</div><!--//section-inner-->                 
+</section>
+
+	<script>
+		jQuery.fn.extend({
+			toggleText: function (a, b){
+					var that = this;
+							if (that.text() != a && that.text() != b){
+									that.text(a);
+							}
+							else
+							if (that.text() == a){
+									that.text(b);
+							}
+							else
+							if (that.text() == b){
+									that.text(a);
+							}
+					return this;
+			}
+		});
+		$( "#mas_experiencias" ).click(function() {
+			$( ".mas_experiencias" ).slideToggle( "slow", "linear" );
+			$("#mas_experiencias").toggleText('Ocultar', 'Ver Más');
+		})	
+	</script>

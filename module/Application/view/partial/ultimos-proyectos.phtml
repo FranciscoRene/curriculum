@@ -1,0 +1,63 @@
+<?php
+$link = 
+	$this->url(
+	'trabajos/trabajo-detalle', array('action'=>'detalle', 'id' => $this->trabajo_destacado->getTr_codigo())
+	);
+?>
+<section class="latest section">
+<div class="section-inner">
+<h2 class="heading">Ultimos Proyectos</h2>
+<div class="content">    
+
+<div class="item featured text-center">
+<h3 class="title"><a href="<?=$link?>" target="_blank"><?=$this->trabajo_destacado->getTr_titulo() ." - ". $this->trabajo_destacado->getTr_subtitulo() ?></a></h3>
+<p class="summary"><?= $this->trabajo_destacado->getTr_sumario() ?></p>
+<div class="featured-image">
+<a href="<?=$link?>" target="_blank">
+<img class="img-responsive project-image" src="imagenes/modulos/inicio/project-featured.png" alt="project name">
+</a>
+<div class="ribbon">
+<div class="text">New</div>
+</div>
+</div>
+<div class="desc text-left">                                    
+<!--<p>You can promote your main project here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
+<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus.</p>-->
+	<?=$this->trabajo_destacado->getTr_cuerpo()?>
+</div><!--//desc-->         
+<a class="btn btn-cta-secondary" href="<?=$link?>" target="_blank"><i class="fa fa-thumbs-o-up"></i> Ver Más</a>                 
+</div><!--//item-->
+<hr class="divider">
+	<?php 
+	foreach($this->trabajos as $trabajo): 
+	$link = 
+		$this->url(
+		'trabajos/trabajo-detalle', array('action'=>'detalle', 'id' => $trabajo->getTr_codigo())
+		);
+	?>
+	<div class="item row">
+		<a class="col-md-4 col-sm-4 col-xs-12" href="<?= $link ?>" target="_blank">
+		<img class="img-responsive project-image" src="<?= $trabajo->getTr_imagen_perfil(); ?>" alt="project name">
+		</a>
+		<div class="desc col-md-8 col-sm-8 col-xs-12">
+			<h3 class="title"><a href="<?= $link ?>" target="_blank"><?= $trabajo->getTr_titulo(); ?> - <?= $trabajo->getTr_subtitulo(); ?></a></h3>
+			<p><?=$trabajo->getTr_resumen(); ?></p>
+			<p><a class="more-link" href="<?= $link ?>" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+		</div><!--//desc-->                          
+	</div><!--//item-->
+<?php endforeach ?>
+
+<!--<div class="item row">
+<a class="col-md-4 col-sm-4 col-xs-12" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">
+<img class="img-responsive project-image" src="imagenes/modulos/inicio/project-2.png" alt="project name">
+</a>
+<div class="desc col-md-8 col-sm-8 col-xs-12">
+<h3 class="title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">DevStudio - Designed for Web Development Agencies</a></h3>
+<p>You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
+<p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>-->
+</div><!--//desc-->                          
+</div><!--//item-->
+</div><!--//content-->  
+</div><!--//section-inner-->                 
+</section>
+

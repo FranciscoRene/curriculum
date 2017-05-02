@@ -1,0 +1,62 @@
+<?php
+$this->headLink()->appendStylesheet('/js/vendor/lightbox/resource/lightbox.css');
+$this->headLink()->appendStylesheet('/css/detalle.css');
+$this->headScript()->prependFile(
+	'/js/vendor/lightbox/resource/lightbox_plus_min.js',
+	'text/javascript'
+);
+?>
+<div class="wrapper">
+	<section class="latest section">
+		<div class="section-inner">
+	 <!-- Portfolio Item Heading -->
+					<div class="row">
+							<div class="col-lg-12">
+									<h1 class="page-header"><?=$trabajo->getTr_titulo()?>
+											<strike><small>Item Subheading</small></strike>
+									</h1>
+							</div>
+					</div>
+					<!-- /.row -->
+
+					<!-- Portfolio Item Row -->
+					<div class="row">
+
+							<div class="col-md-8">
+									<img class="img-responsive" src="http://placehold.it/750x500" alt="">
+							</div>
+
+							<div class="col-md-4">
+									<h3>Descripción</h3>
+									<p><?= $ayudaService->cortar_frase($trabajo->getTr_cuerpo(), 60)?></p>
+									<h3>Project Details</h3>
+									<ul>
+											<li>Lorem Ipsum</li>
+											<li>Dolor Sit Amet</li>
+											<li>Consectetur</li>
+											<li>Adipiscing Elit</li>
+									</ul>
+							</div>
+
+					</div>
+					<!-- /.row -->
+
+					<!-- Related Projects Row -->
+					<div class="row">
+
+							<div class="col-lg-12">
+									<h3 class="page-header">Related Projects</h3>
+							</div>
+							
+				<?php foreach($trabajo->getImagenes() as $imagenObj) :?>
+								<div class="col-sm-3 col-xs-6">
+										<a href="<?= str_replace("png", "jpeg", $imagenObj->getTri_imagen_grande())?>" rel="lightbox1">
+												<img class="img-responsive portfolio-item" src="<?= $imagenObj->getTri_imagen_galeria() ?>" alt="" width="500px" height="300px">
+										</a>
+								</div>
+				<?php endforeach ?>
+
+					</div>
+		</div>
+	</section>
+</div>

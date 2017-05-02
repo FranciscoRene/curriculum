@@ -1,0 +1,24 @@
+<div class="wrapper">
+	<section class="latest section">
+		<div class="section-inner">
+			<?php
+			echo $this->partial('partial/listado-trabajos.phtml', array(
+							'ayudaService' => $ayudaService,
+							'trabajos' => $this->trabajos,
+						));
+			echo $this->paginationControl(
+					 // the paginator object
+					 $this->trabajos,
+					 // the scrolling style
+					 'sliding',
+					 // the partial to use to render the control
+					 'partial/paginator.phtml',
+					 // the route to link to when a user clicks a control link
+					 array(
+							 'route' => 'trabajos'
+					 )
+			);
+			?>
+		</div>
+	</section>
+</div>

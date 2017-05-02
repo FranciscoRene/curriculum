@@ -1,0 +1,33 @@
+<?php
+$this->headLink()->appendStylesheet('/css/sistema/sitio.css');
+if($trabajos) { 
+	foreach($trabajos as $t) { ?>	
+			<div class="row im-centered">
+			<div class="col-xs-12 cj-trb">
+				<img class="imgTrab" src="<?php echo $t->getTr_imagen_perfil() ?>" alt="<?php echo $t->getTr_titulo() ?>">	
+				<div class="descripcion">
+					<p class="text-fecha"><?php echo $t->getTr_fecha() ?></p>
+					<h3><?php echo $t->getTr_titulo() ?></h3>
+					<p><?php echo $ayudaService->cortar_frase($t->getTr_cuerpo(), 20) ?></p>			
+					<p><a class="btn btn-default" href="<?php echo $this->url(
+						'trabajos/trabajo-detalle', array('action'=>'detalle', 'id' => $t->getTr_codigo())
+						);?>" role="button">View details &raquo;</a></p>			
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+<?php } ?>
+<?php
+ echo $this->paginationControl(
+     // the paginator object
+     $this->trabajos,
+     // the scrolling style
+     'sliding',
+     // the partial to use to render the control
+     'partial/paginator.phtml',
+     // the route to link to when a user clicks a control link
+     array(
+         'route' => 'trabajos'
+     )
+ );
+?>

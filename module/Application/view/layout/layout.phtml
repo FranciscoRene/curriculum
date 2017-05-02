@@ -1,0 +1,68 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Francisco Rene Flores Fuentes') ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet(array('rel' => 'stylesheet', 'media' => 'screen and (max-width: 767px)', 'href' => '/css/responsive/responsive.css'))
+                        ->prependStylesheet($this->basePath() . '/css/sistema/experiencia-laboral.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/habilidades.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/info.css')
+                        ->prependStylesheet($this->basePath() . '/css/footer.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/idiomas.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/seccion-educacion.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/seccion-about.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/pagination.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/secciones.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/header.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/base.css')
+                        ->prependStylesheet($this->basePath() . '/css/sistema/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/font-awesome.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css');
+				?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>">&nbsp;<?php echo 'Portafolio' ?></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="<?php echo $this->url('trabajos') ?>"><?php echo 'Trabajos' ?></a></li>
+                        <li class=""><a href="<?php echo $this->url('contacto') ?>"><?php echo 'Contacto' ?></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+				<?php echo $this->header; ?>
+        <div class="container">
+            <?php echo $this->content; ?>
+        </div> <!-- /container -->
+				<?=$this->partial('partial/footer.phtml');?>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

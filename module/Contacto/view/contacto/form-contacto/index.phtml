@@ -1,0 +1,48 @@
+<?php
+$this->headLink()->appendStylesheet(
+	'/js/jquery/node_modules/jquery-form-validator/form-validator/theme-default.min.css'
+);
+$this->headLink()->appendStylesheet(
+	'/css/sistema/modulos/contacto/index.css'
+);
+
+$this->headScript()->prependFile(
+		'/js/jquery/node_modules/jquery-form-validator/form-validator/jquery.form-validator.min.js'
+);
+	
+$this->inlineScript()->appendFile(
+    '/js/sistema/modulos/contacto/contacto.js',
+    'text/javascript'
+);
+?>
+<div class="wrapper">
+	<section class="latest section">
+		<div class="section-inner">
+			<div class="row">
+					<form id="form-contacto">
+						<div class="col-xs-12">
+							<h1>Contacto</h1>
+							<hr>
+								<div class="col-sm-6">
+									<input type="text" name="con_nombre" class="form-control ipcnt" placeholder="Nombre*" maxlength="50" 
+									data-validation="con_nombre" data-validation-error-msg-container="#nombre-error-dialog" >
+									<div id="nombre-error-dialog"></div>
+									<input type="text" id="email" name="con_email" class="form-control ipcnt" placeholder="Email*" maxlength="50" 
+									data-validation="email" data-validation-error-msg="* Correo inválido" data-validation-error-msg-container="#email-error-dialog">
+									<div id="con_email-error-dialog"></div>
+								</div>
+								<div class="col-sm-6">
+									<textarea class="form-control" id="mensaje" rows="7" cols="50" title="Mensaje" name="con_mensaje" placeholder="Mensaje*" maxlength="600"
+									data-validation="required" data-validation-error-msg="* Esta información es requerida" data-validation-error-msg-container="#required-error-dialog" ></textarea>
+									<p class="pull-right">(*) Datos requeridos</p>
+									<div id="required-error-dialog"></div>
+								</div>
+						</div>
+						<div class="col-xs-12 col-sm-2 pull-right">
+							<input type="submit" value="Enviar" id="boton-enviar" class="btn btn-lg btn-primary btn-block">
+						</div>
+					</form>
+			</div>
+		</div>
+	</section>
+</div>

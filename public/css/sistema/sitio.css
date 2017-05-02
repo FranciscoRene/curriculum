@@ -1,0 +1,108 @@
+body {
+	padding-top: 70px;
+}
+
+a {
+    color: #222;
+		text-decoration: underline;
+}
+/*Tema*/
+a:hover {
+	color: #222;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.btn-primary, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:focus{
+    color: #fff;
+		background-color: #222;
+		border-color: #080808;
+}
+.btn-primary:hover{
+	color:#000;
+	background-color: #ddd;
+	border-color: #080808;
+}
+.btn-primary:active{
+    color: #fff;
+		background-color: #222;
+		border-color: #080808;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #222;
+    border-color: #080808;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #222;
+}
+/*Navegacion*/
+#navigation{
+	margin:0;
+	padding:11px;
+	background-color:#ddd;
+	margin-top:-20px;
+	margin-bottom:15px;
+}
+ul.nav li a{
+	text-decoration: none;
+}
+.navbar-brand{
+	text-decoration: none;	
+}
+ul.nav li a:hover{
+	font-weight: normal;
+}
+.navbar-brand:hover{
+	font-weight: normal;	
+}
+/*Portada*/
+.item>img{
+	min-height:209px;
+}
+.thumbnail>img{
+	min-height:173px;
+}
+.npdg{
+	padding:0px
+}
+/*Trabajos*/
+.im-centered {
+	margin: auto;
+	max-width: 900px;
+}
+.descripcion{
+    display:inline-block;
+		width:80%;
+		min-width:250px;
+		max-width:100%;
+}
+.cj-trb{
+	padding:11px;
+	border: 1px solid #ddd;
+	margin-bottom:15px;
+}
+.imgTrab{
+    display:inline-block;
+		max-height: 114px;
+		min-width: 114px;
+    border:1px solid red;
+    vertical-align:top;
+    margin-right:10px;
+}
+/*Buscar*/
+.buscar-icono{
+	cursor: pointer;
+}
+/*Contacto*/
+.ipcnt{
+	height:41px;
+	margin-bottom:15px;
+}
+/*Media Trabajos*/
+@media screen and (max-width: 778px){.descripcion{width:75%;}}
+@media screen and (max-width: 588px){.descripcion{width:70%;}}
+@media screen and (max-width: 503px){.descripcion{width:65%;}}
+@media screen and (max-width: 454px){.descripcion{width:100%;}}
+@media screen and (max-width: 380px){.imgTrab{width:100%;}}

@@ -1,0 +1,96 @@
+		<section class="skills aside section">
+			<div class="section-inner">
+			<h2 class="heading">Habilidades</h2>
+			<div class="content">
+				<p class="intro"></p>
+
+				<div class="skillset">
+
+				<div class="item">
+				<h3 class="level-title">Java<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="" data-original-title="You can use the tooltip to add more info...">Med</span></h3>
+				<div class="level-bar">
+				<div class="level-bar-inner" data-level="96%" style="width: 70%;">
+				</div>                                      
+				</div><!--//level-bar-->                                 
+				</div><!--//item-->
+				
+				<div class="item">
+				<h3 class="level-title">PHP, Zend Framework, Codeigniter<span class="level-label" data-original-title="" title="">Expert</span></h3>
+				<div class="level-bar">
+				<div class="level-bar-inner" data-level="90%" style="width: 90%;">
+				</div>                                      
+				</div><!--//level-bar-->                                 
+				</div><!--//item-->
+
+				<div class="item">
+				<h3 class="level-title">Javascript &amp; jQuery<span class="level-label" data-original-title="" title="">Pro</span></h3>
+				<div class="level-bar">
+				<div class="level-bar-inner" data-level="85%" style="width: 85%;">
+				</div>                                      
+				</div><!--//level-bar-->                                 
+				</div><!--//item-->
+				
+				<div class="item">
+				<h3 class="level-title">MySql, PostgreSQL, Sqlite<span class="level-label" data-original-title="" title="">Pro</span></h3>
+				<div class="level-bar">
+				<div class="level-bar-inner" data-level="80%" style="width: 80%;">
+				</div>                                      
+				</div><!--//level-bar-->                                 
+				</div><!--//item-->				
+
+				<div class="mas_skill">
+					<div class="item">
+					<h3 class="level-title">HTML, CSS<span class="level-label" data-original-title="" title="">Pro</span></h3>
+					<div class="level-bar">
+					<div class="level-bar-inner" data-level="70%" style="width: 70%;">
+					</div>                                      
+					</div><!--//level-bar-->                                 
+					</div><!--//item-->				
+				
+					<div class="item">
+						<h3 class="level-title">Bootstrap 3<span class="level-label" data-original-title="" title="">Pro</span></h3>
+						<div class="level-bar">
+						<div class="level-bar-inner" data-level="70%" style="width: 70%;">
+						</div>                                      
+						</div><!--//level-bar-->                                 
+					</div><!--//item--> 				
+					
+					<div class="item">
+						<h3 class="level-title">Bootstrap 3<span class="level-label" data-original-title="" title="">Pro</span></h3>
+						<div class="level-bar">
+						<div class="level-bar-inner" data-level="70%" style="width: 70%;">
+						</div>                                      
+						</div><!--//level-bar-->                                 
+					</div><!--//item--> 
+				</div>
+				</div>              
+				</div><!--//content-->
+				<div class="extra-habilidades">
+					<a id="mas_skill" class="">Ver Más</a>
+				</div>
+			</div><!--//section-inner-->                 
+		</section><!--//section-->
+		<script>
+			jQuery.fn.extend({
+				toggleText: function (a, b){
+						var that = this;
+								if (that.text() != a && that.text() != b){
+										that.text(a);
+								}
+								else
+								if (that.text() == a){
+										that.text(b);
+								}
+								else
+								if (that.text() == b){
+										that.text(a);
+								}
+						return this;
+				}
+			});
+			
+			$( "#mas_skill" ).click(function() {
+				$( ".mas_skill" ).slideToggle( "slow", "linear" );
+				$("#mas_skill").toggleText('Ocultar', 'Ver Más');
+			})	
+    </script>
