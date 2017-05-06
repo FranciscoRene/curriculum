@@ -1,0 +1,8 @@
+.portfolio-item {
+	float: left;
+	width: 40%;
+}
+
+.desc h3 {
+	margin-top: 0px;
+}

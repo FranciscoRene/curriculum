@@ -54,8 +54,12 @@ class TrabajoMapper implements TrabajoMapperInterface {
 		$sql 		= new Sql($this->dbAdapter);
 		$select = $sql->select('trabajo');
 		
-		if($limit)
+		if($limit) {
+		        $select->order('tr_codigo DESC');
 			$select->limit($limit);
+			$id = $this->destacado()->getTr_codigo();
+			$select->where(' not tr_codigo = ' . $id );
+		}
 		
 		$stmt		= $sql->prepareStatementForSqlObject($select);
 		$result	=	$stmt->execute();
@@ -90,7 +94,7 @@ class TrabajoMapper implements TrabajoMapperInterface {
 		$select->where(array('tr_codigo = ?' => $id));
 		
 		$stmt   = $sql->prepareStatementForSqlObject($select);
-    $result = $stmt->execute();
+		$result = $stmt->execute();
 
 		if ($result instanceof ResultInterface && $result->isQueryResult() && $result->getAffectedRows()) {
 			 $trabajo = $this->hydrator->hydrate($result->current(), $this->trabajoPrototype);
@@ -111,7 +115,7 @@ class TrabajoMapper implements TrabajoMapperInterface {
 		$select->limit(1);
 		
 		$stmt   = $sql->prepareStatementForSqlObject($select);
-    $result = $stmt->execute();
+		$result = $stmt->execute();
 
 		if ($result instanceof ResultInterface && $result->isQueryResult() && $result->getAffectedRows()) {
 			 $trabajo = $this->hydrator->hydrate($result->current(), $this->trabajoPrototype);

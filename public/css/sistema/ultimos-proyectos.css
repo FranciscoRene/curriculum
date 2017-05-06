@@ -92,3 +92,7 @@
 .latest .featured-image .ribbon .text:after {
   right: 0;
 }
+
+.imagen-destacada-chica {
+	display: none;
+}

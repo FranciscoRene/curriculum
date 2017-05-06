@@ -11,9 +11,12 @@
         ?>
 
         <!-- Le styles -->
-        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                        ->prependStylesheet(array('rel' => 'stylesheet', 'media' => 'screen and (max-width: 767px)', 'href' => '/css/responsive/responsive.css'))
-                        ->prependStylesheet($this->basePath() . '/css/sistema/experiencia-laboral.css')
+        <?php echo $this->headLink()
+			->prependStylesheet(array('rel' => 'stylesheet', 'media' => 'screen and (min-width: 320px) and (max-width: 389px)', 'href' => '/css/responsive/min320-max389.css'))
+                        ->prependStylesheet(array('rel' => 'stylesheet', 'media' => 'screen and (min-width: 390px) and (max-width: 570px)', 'href' => '/css/responsive/min390-max570.css'))
+			->prependStylesheet(array('rel' => 'stylesheet', 'media' => 'screen and (min-width: 466px) and (max-width: 767px)', 'href' => '/css/responsive/min466-max767.css'))
+			->prependStylesheet($this->basePath() .  '/css/responsive/responsive.css')
+			->prependStylesheet($this->basePath() . '/css/sistema/experiencia-laboral.css')
                         ->prependStylesheet($this->basePath() . '/css/sistema/habilidades.css')
                         ->prependStylesheet($this->basePath() . '/css/sistema/info.css')
                         ->prependStylesheet($this->basePath() . '/css/footer.css')
@@ -27,8 +30,11 @@
                         ->prependStylesheet($this->basePath() . '/css/sistema/style.css')
                         ->prependStylesheet($this->basePath() . '/css/font-awesome.min.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css');
-				?>
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+			->prependStylesheet(array('rel' => 'stylesheet', 'type' => 'text/css', 'href' => 'http://fonts.googleapis.com/css?family=Montserrat:400,700'))
+			->prependStylesheet(array('rel' => 'stylesheet', 'type' => 'text/css', 'href' => 'http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic'))
+			->prependStylesheet(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'));	
+	?>
 
         <!-- Scripts -->
         <?php echo $this->headScript()

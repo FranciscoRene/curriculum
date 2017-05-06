@@ -10,11 +10,12 @@ $link =
 <div class="content">    
 
 <div class="item featured text-center">
-<h3 class="title"><a href="<?=$link?>" target="_blank"><?=$this->trabajo_destacado->getTr_titulo() ." - ". $this->trabajo_destacado->getTr_subtitulo() ?></a></h3>
+<h3 class="title"><a href="<?=$link?>" target="_blank"><?=$this->trabajo_destacado->getTr_titulo();  $this->trabajo_destacado->getTr_subtitulo() ?></a></h3>
 <p class="summary"><?= $this->trabajo_destacado->getTr_sumario() ?></p>
 <div class="featured-image">
 <a href="<?=$link?>" target="_blank">
-<img class="img-responsive project-image" src="imagenes/modulos/inicio/project-featured.png" alt="project name">
+	<img class="img-responsive project-image imagen-destacada" src="imagenes/modulos/inicio/project-featured.png" alt="project name">
+	<img class="imagen-destacada-chica img-responsive project-image" src="imagenes/tamaño-imagen-referencia/project-1.png" alt="project name">
 </a>
 <div class="ribbon">
 <div class="text">New</div>
@@ -23,11 +24,12 @@ $link =
 <div class="desc text-left">                                    
 <!--<p>You can promote your main project here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
 <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. At vero eos et accusamus et iusto odio dignissimos ducimus.</p>-->
-	<?=$this->trabajo_destacado->getTr_cuerpo()?>
+	<?=$this->trabajo_destacado->getTr_resumen()?>
 </div><!--//desc-->         
 <a class="btn btn-cta-secondary" href="<?=$link?>" target="_blank"><i class="fa fa-thumbs-o-up"></i> Ver Más</a>                 
 </div><!--//item-->
 <hr class="divider">
+<div class="row">
 	<?php 
 	foreach($this->trabajos as $trabajo): 
 	$link = 
@@ -35,6 +37,24 @@ $link =
 		'trabajos/trabajo-detalle', array('action'=>'detalle', 'id' => $trabajo->getTr_codigo())
 		);
 	?>
+	
+	<div class="col-sm-5 col-xs-12">
+	<div class="item">
+		<a href="<?= $link ?>" target="_blank">
+		<img class="img-responsive portfolio-item" src="<?= $trabajo->getTr_imagen_perfil(); ?>">
+		</a>
+		<div class="desc">
+			<h3 class="title"><a href="<?= $link ?>" target="_blank"><?= $trabajo->getTr_titulo(); ?> - <?= $trabajo->getTr_subtitulo(); ?></a></h3>
+			<p><?=$trabajo->getTr_resumen(); ?>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			Nam luctus eget diam et auctor. Duis leo turpis, lobortis sed blandit sit amet, mattis ac elit. 
+			 </p>
+			<p><a class="more-link" href="<?= $link ?>" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+		</div><!--//desc--> 
+	</div>
+	</div>
+	
+	<?php /*
+	<!--
 	<div class="item row">
 		<a class="col-md-4 col-sm-4 col-xs-12" href="<?= $link ?>" target="_blank">
 		<img class="img-responsive project-image" src="<?= $trabajo->getTr_imagen_perfil(); ?>" alt="project name">
@@ -45,7 +65,10 @@ $link =
 			<p><a class="more-link" href="<?= $link ?>" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
 		</div><!--//desc-->                          
 	</div><!--//item-->
+	-->
+	*/?>
 <?php endforeach ?>
+</div>
 
 <!--<div class="item row">
 <a class="col-md-4 col-sm-4 col-xs-12" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">

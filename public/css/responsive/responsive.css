@@ -1,3 +1,15 @@
+.imagen-destacada-chica {
+	display: none;
+}
+
+.imagen-destacada {
+	width: 100%;
+	max-height: 374px;
+}
+
+.portfolio-item {
+	margin-right: 15px;
+}
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
