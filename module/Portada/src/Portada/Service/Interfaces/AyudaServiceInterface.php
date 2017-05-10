@@ -1,5 +1,5 @@
 <?php
-namespace Application\Service\Interfaces;
+namespace Portada\Service\Interfaces;
 
 interface AyudaServiceInterface {
 	

@@ -13,7 +13,7 @@ class ListTrabajoControllerFactory implements FactoryInterface {
 
 		return new ListTrabajoController(
 			$sl->get('Trabajo\Service\TrabajoServiceInterface'),
-			$sl->get('Application\Service\AyudaService')
+			$sl->get('Portada\Service\AyudaService')
 			);	
 	}
 	

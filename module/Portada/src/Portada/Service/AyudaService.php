@@ -1,7 +1,7 @@
 <?php
-namespace Application\Service;
+namespace Portada\Service;
 
-use Application\Service\Interfaces\AyudaServiceInterface;
+use Portada\Service\Interfaces\AyudaServiceInterface;
 
 class AyudaService implements AyudaServiceInterface {
 	

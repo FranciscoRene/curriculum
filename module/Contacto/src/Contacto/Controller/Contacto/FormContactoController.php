@@ -4,7 +4,7 @@ namespace Contacto\Controller\Contacto;
 use Contacto\Service\Interfaces\ContactoServiceInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Application\Service\Interfaces\AyudaServiceInterface;
+use Portada\Service\Interfaces\AyudaServiceInterface;
 
 class FormContactoController extends AbstractActionController {
 	

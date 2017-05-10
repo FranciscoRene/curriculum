@@ -1,7 +1,7 @@
 <?php
-namespace Application\Controller\Factory;
+namespace Portada\Controller\Factory;
 
-use Application\Controller\IndexController;
+use Portada\Controller\IndexController;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 

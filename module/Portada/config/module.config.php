@@ -15,7 +15,7 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
+                        'controller' => 'Portada\Controller\Index',
                         'action'     => 'index',
                     ),
                 ),
@@ -24,12 +24,12 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'application' => array(
+            'portada' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/application',
+                    'route'    => '/portada',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
+                        '__NAMESPACE__' => 'Portada\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -54,7 +54,7 @@ return array(
     ),
     'service_manager' => array(
 				'invokables' => array(
-					'Application\Service\AyudaService' => 'Application\Service\AyudaService',
+					'Portada\Service\AyudaService' => 'Portada\Service\AyudaService',
 			  ),
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
@@ -76,7 +76,7 @@ return array(
     ),
     'controllers' => array(
         'factories' => array(
-            'Application\Controller\Index' => 'Application\Controller\Factory\IndexControllerFactory'
+            'Portada\Controller\Index' => 'Portada\Controller\Factory\IndexControllerFactory'
         ),
     ),
     'view_manager' => array(

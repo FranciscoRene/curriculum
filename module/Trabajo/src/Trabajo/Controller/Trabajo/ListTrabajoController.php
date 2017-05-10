@@ -4,7 +4,7 @@ namespace Trabajo\Controller\Trabajo;
 use Trabajo\Service\Interfaces\TrabajoServiceInterface;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Application\Service\Interfaces\AyudaServiceInterface;
+use Portada\Service\Interfaces\AyudaServiceInterface;
 use Zend\Paginator\Paginator;
 use Zend\Paginator\Adapter\Iterator as paginatorIterator;
 

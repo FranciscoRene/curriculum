@@ -14,7 +14,7 @@ class FormContactoControllerFactory implements FactoryInterface {
 		
 		return new FormContactoController(
 			$sl->get('Contacto\Service\ContactoServiceInterface'),
-			$sl->get('Application\Service\AyudaService')
+			$sl->get('Portada\Service\AyudaService')
 			);	
 	}
 	

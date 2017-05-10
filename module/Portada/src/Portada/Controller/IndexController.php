@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Application\Controller;
+namespace Portada\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
@@ -28,12 +28,12 @@ class IndexController extends AbstractActionController {
 	
     public function indexAction() {
 				
-				$layout = $this->layout();
+	$layout = $this->layout();
         $header = new ViewModel();
         $header->setTemplate('partial/header');
         $layout->addChild($header, 'header');
 				
-				$trabajos = $this->trabajoService->findAllTrabajos(2);
+				$trabajos = $this->trabajoService->findAllTrabajos(3);
 				$destacado = $this->trabajoService->destacado();
 				
         return new ViewModel(array(
